@@ -17,6 +17,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/kek', function(Request $req){
-    return 'Hello World';
-});
+Route::get('product','ProductController@index');
+Route::get('product/{id}','ProductController@show')->name('product.show');
+
+Route::get('demo/user', 'DemoController@demouser');
+
+Route::post('user/login', 'UserController@login');
+Route::get('user/{id}','UserController@show')->name('user.show');
+
