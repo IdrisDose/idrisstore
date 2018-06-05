@@ -12,6 +12,6 @@ services:
     ports:
       - "8888:80"
     volumes:
-      - ./web:/var/www
+      - ./src:/var/www
       - ./storage/app:/var/www/storage/app
       - ./storage/logs:/var/www/storage/logss
