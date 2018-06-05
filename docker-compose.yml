@@ -7,7 +7,7 @@ services:
     volumes:
       - ./storage/mysql:/var/lib/mysql
   web:
-    build: ./web
+    build: ./src
     container_name: web
     ports:
       - "8890:3306"
